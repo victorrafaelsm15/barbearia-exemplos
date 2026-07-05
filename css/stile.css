@@ -456,3 +456,62 @@ display:none;
 }
 
 }
+/* AJUSTE DE IMAGENS */
+
+.about-img{
+height:260px;
+object-fit:cover;
+object-position:center;
+}
+
+.main-about-img{
+height:280px;
+}
+
+.second-about-img{
+height:220px;
+}
+
+.gallery-item{
+height:220px;
+object-fit:cover;
+object-position:center;
+}
+
+.team-card img{
+height:260px;
+object-fit:cover;
+object-position:top center;
+}
+
+.logo-area img{
+width:42px;
+height:42px;
+object-fit:contain;
+}
+
+.footer-content img{
+width:60px;
+height:auto;
+object-fit:contain;
+}
+@media(max-width:600px){
+
+.about-img{
+height:210px;
+}
+
+.gallery-item{
+height:190px;
+}
+
+.team-card img{
+height:230px;
+}
+
+.hero{
+min-height:85vh;
+background-position:center;
+}
+
+}
