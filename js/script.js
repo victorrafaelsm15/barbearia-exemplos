@@ -93,7 +93,7 @@ function animacoes(){
 
 const itens=document.querySelectorAll(
 
-".service-card,.barber-card,.gallery-item,.why-card,.about-text,.about-images,.contact-info,.map-box"
+".service-card,.barber-card,.gallery-item,.why-card,.about-text,.contact-info,.map-box"
 
 );
 
