@@ -1,4 +1,4 @@
-const whatsappButtons = [
+const botoesWhatsapp=[
 "headerWhatsapp",
 "heroWhatsapp",
 "aboutWhatsapp",
@@ -7,97 +7,159 @@ const whatsappButtons = [
 "floatingWhatsapp"
 ];
 
-function criarLinkWhatsapp(mensagem){
-const texto = encodeURIComponent(mensagem);
-return `https://wa.me/${empresa.telefone}?text=${texto}`;
+function linkWhatsapp(msg){
+return `https://wa.me/${empresa.telefone}?text=${encodeURIComponent(msg)}`;
 }
 
-function aplicarDadosEmpresa(){
-document.title = `${empresa.nome} | Cortes Masculinos e Barba`;
+function carregarEmpresa(){
 
-document.querySelectorAll("span, h1, h2, h3, p").forEach(el=>{
-if(el.textContent.includes("Barbearia XXXX")){
-el.textContent = el.textContent.replace("Barbearia XXXX", empresa.nome);
-}
+document.title=`${empresa.nome} | Cortes Masculinos e Barba`;
+
+document.querySelectorAll(".empresa-nome,#footerEmpresa").forEach(el=>{
+el.textContent=empresa.nome;
 });
 
-document.getElementById("endereco").textContent = empresa.endereco;
-document.getElementById("horario").textContent = empresa.horario;
+document.getElementById("endereco").textContent=empresa.endereco;
 
-document.getElementById("instagramLink").href = empresa.instagram;
-document.getElementById("instagramLink").textContent = empresa.instagramUsuario;
+document.getElementById("horario").textContent=empresa.horario;
 
-document.getElementById("googleMaps").src = empresa.maps;
-document.getElementById("footerEmpresa").textContent = empresa.nome;
+document.getElementById("instagramLink").href=empresa.instagram;
 
-whatsappButtons.forEach(id=>{
-const botao = document.getElementById(id);
+document.getElementById("instagramLink").textContent=empresa.instagramUsuario;
+
+document.getElementById("googleMaps").src=empresa.maps;
+
+botoesWhatsapp.forEach(id=>{
+
+const botao=document.getElementById(id);
+
 if(botao){
-botao.href = criarLinkWhatsapp(`Olá! Vim pelo site da ${empresa.nome} e gostaria de saber mais informações.`);
-}
-});
+
+botao.href=linkWhatsapp(`Olá! Vim pelo site da ${empresa.nome} e gostaria de mais informações.`);
+
 }
 
+});
+
+}
 function carregarServicos(){
-const grid = document.getElementById("servicesGrid");
+
+const grid=document.getElementById("servicesGrid");
 
 servicos.forEach(servico=>{
-const card = document.createElement("div");
-card.className = "service-card";
 
-card.innerHTML = `
+grid.innerHTML+=`
+
+<div class="service-card">
+
 <h3>${servico.nome}</h3>
+
 <p>${servico.descricao}</p>
+
 <div class="service-price">${servico.preco}</div>
+
+</div>
+
 `;
 
-grid.appendChild(card);
 });
+
 }
 function carregarBarbeiros(){
-if(barbeiros[0]){
-document.getElementById("barbeiro1Nome").textContent = barbeiros[0].nome;
-document.getElementById("barbeiro1Descricao").textContent = barbeiros[0].descricao;
-}
 
-if(barbeiros[1]){
-document.getElementById("barbeiro2Nome").textContent = barbeiros[1].nome;
-document.getElementById("barbeiro2Descricao").textContent = barbeiros[1].descricao;
-}
-}
+document.getElementById("barbeiro1Nome").textContent=barbeiros[0].nome;
 
+document.getElementById("barbeiro1Bio").textContent=barbeiros[0].bio;
+
+document.getElementById("barbeiro2Nome").textContent=barbeiros[1].nome;
+
+document.getElementById("barbeiro2Bio").textContent=barbeiros[1].bio;
+
+}
 function menuMobile(){
-const button = document.getElementById("menuButton");
-const menu = document.querySelector(".menu");
 
-button.addEventListener("click", ()=>{
+const menu=document.getElementById("nav");
+
+const botao=document.getElementById("menuBtn");
+
+botao.addEventListener("click",()=>{
+
 menu.classList.toggle("active");
-});
-}
 
-function animarElementos(){
-const elementos = document.querySelectorAll(
-".service-card,.gallery-item,.team-card,.why-card,.about-text,.about-images,.contact-info,.map-area"
+});
+
+}
+function animacoes(){
+
+const itens=document.querySelectorAll(
+
+".service-card,.barber-card,.gallery-item,.why-card,.about-text,.about-images,.contact-info,.map-box"
+
 );
 
-const observer = new IntersectionObserver(entries=>{
+const observer=new IntersectionObserver(entries=>{
+
 entries.forEach(entry=>{
+
 if(entry.isIntersecting){
+
 entry.target.classList.add("show");
+
 }
+
 });
+
 },{threshold:.15});
 
-elementos.forEach(el=>{
-el.classList.add("hidden");
-observer.observe(el);
+itens.forEach(item=>{
+
+item.classList.add("hidden");
+
+observer.observe(item);
+
 });
+
+}
+function galeria(){
+
+const imagens=document.querySelectorAll(".gallery-item");
+
+const lightbox=document.getElementById("lightbox");
+
+const lightboxImg=document.getElementById("lightboxImg");
+
+imagens.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+lightbox.classList.add("active");
+
+lightboxImg.src=img.src;
+
+});
+
+});
+
+lightbox.addEventListener("click",()=>{
+
+lightbox.classList.remove("active");
+
+});
+
 }
 
-document.addEventListener("DOMContentLoaded", ()=>{
-aplicarDadosEmpresa();
+document.addEventListener("DOMContentLoaded",()=>{
+
+carregarEmpresa();
+
 carregarServicos();
+
 carregarBarbeiros();
+
 menuMobile();
-animarElementos();
+
+animacoes();
+
+galeria();
+
 });
