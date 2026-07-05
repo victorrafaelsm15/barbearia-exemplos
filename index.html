@@ -8,7 +8,7 @@
 
 <title>Barbearia XXXX | Cortes Masculinos e Barba</title>
 
-<meta name="description" content="Barbearia XXXX: cortes masculinos, barba, degradê, acabamento e atendimento de qualidade. Agende pelo WhatsApp.">
+<meta name="description" content="Barbearia XXXX: cortes masculinos, barba, degradê, acabamento e atendimento profissional pelo WhatsApp.">
 
 <meta name="theme-color" content="#111111">
 
@@ -17,31 +17,32 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="./css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<header class="site-header">
+<header class="header">
 
 <div class="container header-content">
 
-<a href="#" class="logo-area">
+<a href="#inicio" class="logo">
 
 <img src="images/logo.png." alt="Logo Barbearia XXXX">
 
-<span>Barbearia XXXX</span>
+<span class="empresa-nome">Barbearia XXXX</span>
 
 </a>
+<nav class="nav" id="nav">
 
-<nav class="menu">
+<a href="#sobre">Sobre</a>
 
 <a href="#servicos">Serviços</a>
 
-<a href="#galeria">Galeria</a>
+<a href="#barbeiros">Barbeiros</a>
 
-<a href="#equipe">Equipe</a>
+<a href="#galeria">Galeria</a>
 
 <a href="#contato">Contato</a>
 
@@ -53,7 +54,7 @@ WhatsApp
 
 </a>
 
-<button class="menu-button" id="menuButton">
+<button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
 
 ☰
 
@@ -71,12 +72,7 @@ WhatsApp
 
 <div class="hero-text">
 
-<span class="badge">
-
-💈 Barbearia Premium
-
-</span>
-
+<span class="hero-badge">💈 Barbearia Premium</span>
 <h1>
 
 Corte, barba e estilo para quem valoriza uma boa aparência.
@@ -85,19 +81,19 @@ Corte, barba e estilo para quem valoriza uma boa aparência.
 
 <p>
 
-Na Barbearia XXXX, cada detalhe importa: atendimento, acabamento, ambiente e experiência.
+Atendimento profissional, ambiente confortável e cortes bem finalizados para você sair com mais confiança.
 
 </p>
 
 <div class="hero-actions">
 
-<a href="#" class="btn btn-primary" id="heroWhatsapp" target="_blank">
+<a href="#" class="btn btn-green" id="heroWhatsapp" target="_blank">
 
 Agendar pelo WhatsApp
 
 </a>
 
-<a href="#galeria" class="btn btn-secondary">
+<a href="#galeria" class="btn btn-outline">
 
 Ver cortes
 
@@ -105,13 +101,13 @@ Ver cortes
 
 </div>
 
-<div class="hero-info">
-
-<span>⭐ Atendimento de qualidade</span>
-
-<span>📍 Localização fácil</span>
+<div class="hero-points">
 
 <span>✂️ Cortes modernos</span>
+
+<span>🧔 Barba e acabamento</span>
+
+<span>📍 Fácil localização</span>
 
 </div>
 
@@ -120,19 +116,53 @@ Ver cortes
 </div>
 
 </section>
+<section class="stats">
 
-<section class="about">
+<div class="container stats-grid">
+
+<div>
+
+<strong>+500</strong>
+
+<span>Clientes atendidos</span>
+
+</div>
+
+<div>
+
+<strong>5.0</strong>
+
+<span>Avaliação média</span>
+
+</div>
+
+<div>
+
+<strong>2</strong>
+
+<span>Profissionais</span>
+
+</div>
+
+<div>
+
+<strong>4</strong>
+
+<span>Serviços principais</span>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about" id="sobre">
 
 <div class="container about-grid">
 
 <div class="about-text">
 
-<span class="section-badge">
-
-Sobre nós
-
-</span>
-
+<span class="section-badge">Sobre nós</span>
 <h2>
 
 Mais do que um corte, uma experiência.
@@ -141,13 +171,13 @@ Mais do que um corte, uma experiência.
 
 <p>
 
-A Barbearia XXXX foi criada para oferecer cortes masculinos, barba e acabamento com qualidade, pontualidade e atenção aos detalhes.
+A Barbearia XXXX foi criada para entregar cortes masculinos, barba e acabamento com atenção aos detalhes, bom atendimento e um ambiente agradável.
 
 </p>
 
 <p>
 
-Nosso objetivo é entregar um atendimento simples, direto e profissional para quem busca melhorar o visual e sair confiante.
+Nosso objetivo é que cada cliente saia satisfeito, com um visual bem finalizado e pronto para qualquer ocasião.
 
 </p>
 
@@ -161,75 +191,120 @@ Falar no WhatsApp
 
 <div class="about-images">
 
-<img src="images/fachada.jpg" alt="Fachada da Barbearia XXXX" class="about-img main-about-img">
+<img src="images/fachada.jpg" alt="Fachada da Barbearia XXXX" class="about-img about-main">
 
-<img src="images/interior.jpg" alt="Interior da Barbearia XXXX" class="about-img second-about-img">
+<img src="images/interior.jpg" alt="Interior da Barbearia XXXX" class="about-img about-second">
 
 </div>
 
 </div>
 
 </section>
-
-<section class="services" id="servicos">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="section-badge">
-
-Serviços
-
-</span>
-
 <h2>
 
-Serviços e preços
+Mais do que um corte, uma experiência.
 
 </h2>
 
 <p>
 
-Valores principais da barbearia. Você pode alterar tudo depois no arquivo config.js.
+A Barbearia XXXX foi criada para entregar cortes masculinos, barba e acabamento com atenção aos detalhes, bom atendimento e um ambiente agradável.
 
 </p>
 
+<p>
+
+Nosso objetivo é que cada cliente saia satisfeito, com um visual bem finalizado e pronto para qualquer ocasião.
+
+</p>
+
+<a href="#" class="btn btn-dark" id="aboutWhatsapp" target="_blank">
+
+Falar no WhatsApp
+
+</a>
+
 </div>
 
-<div class="services-grid" id="servicesGrid">
+<div class="about-images">
+
+<img src="images/fachada.jpg" alt="Fachada da Barbearia XXXX" class="about-img about-main">
+
+<img src="images/interior.jpg" alt="Interior da Barbearia XXXX" class="about-img about-second">
 
 </div>
 
 </div>
 
 </section>
+  <div class="barbers-grid">
+
+<div class="barber-card">
+
+<div class="barber-photo">
+
+<img src="images/barbeiro1.jpg" alt="Barbeiro 1">
+
+</div>
+
+<div class="barber-info">
+
+<h3 id="barbeiro1Nome">João Silva</h3>
+
+<p id="barbeiro1Bio">
+
+Especialista em cortes masculinos modernos, degradê, acabamento e barba. Atua com atenção aos detalhes para entregar um resultado limpo, elegante e bem finalizado em cada atendimento.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="barber-card">
+
+<div class="barber-photo">
+
+<img src="images/barbeiro2.jpg" alt="Barbeiro 2">
+
+</div>
+
+<div class="barber-info">
+  <h3 id="barbeiro2Nome">Carlos Souza</h3>
+
+<p id="barbeiro2Bio">
+
+Especialista em barba, navalhado, cortes clássicos e acabamento. Seu atendimento combina técnica, cuidado e experiência para oferecer um resultado alinhado ao estilo de cada cliente.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <section class="gallery" id="galeria">
 
 <div class="container">
 
-<div class="section-title">
+<div class="section-title light">
 
-<span class="section-badge">
+<span class="section-badge">Galeria</span>
 
-Galeria
-
-</span>
-
-<h2>
-
-Cortes em destaque
-
-</h2>
+<h2>Cortes em destaque</h2>
 
 <p>
 
-Substitua as imagens corte1.jpg, corte2.jpg, corte3.jpg e corte4.jpg pelos cortes reais da barbearia.
+Substitua corte1.jpg, corte2.jpg, corte3.jpg e corte4.jpg pelas fotos reais dos cortes.
 
 </p>
 
 </div>
-
 <div class="gallery-grid">
 
 <img src="images/corte1.jpg" alt="Corte masculino 1" class="gallery-item">
@@ -246,151 +321,40 @@ Substitua as imagens corte1.jpg, corte2.jpg, corte3.jpg e corte4.jpg pelos corte
 
 </section>
 
-<section class="team" id="equipe">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="section-badge">
-
-Equipe
-
-</span>
-
-<h2>
-
-Nossos barbeiros
-
-</h2>
-
-<p>
-
-Espaço preparado para dois profissionais.
-
-</p>
-
-</div>
-
-<div class="team-grid">
-
-<div class="team-card">
-
-<img src="images/barbeiro1.jpg" alt="Barbeiro 1">
-
-<div>
-
-<h3 id="barbeiro1Nome">
-
-João Silva
-
-</h3>
-
-<p id="barbeiro1Descricao">
-
-Especialista em cortes modernos, degradê e acabamento.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="team-card">
-
-<img src="images/barbeiro2.jpg" alt="Barbeiro 2">
-
-<div>
-
-<h3 id="barbeiro2Nome">
-
-Carlos Souza
-
-</h3>
-
-<p id="barbeiro2Descricao">
-
-Especialista em barba, navalhado e cortes clássicos.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 <section class="why">
 
 <div class="container">
 
 <div class="section-title">
 
-<span class="section-badge">
+<span class="section-badge">Diferenciais</span>
 
-Diferenciais
-
-</span>
-
-<h2>
-
-Por que escolher a Barbearia XXXX?
-
-</h2>
+<h2>Por que escolher a Barbearia XXXX?</h2>
 
 </div>
 
 <div class="why-grid">
+  <div class="why-card">
 
-<div class="why-card">
+<h3>✂️ Acabamento profissional</h3>
 
-<h3>
-
-✂️ Acabamento de qualidade
-
-</h3>
-
-<p>
-
-Cortes feitos com atenção aos detalhes para entregar um visual limpo e bem finalizado.
-
-</p>
+<p>Cada corte é feito com atenção ao formato do rosto, estilo pessoal e acabamento final.</p>
 
 </div>
 
 <div class="why-card">
 
-<h3>
+<h3>💈 Ambiente confortável</h3>
 
-💈 Ambiente confortável
-
-</h3>
-
-<p>
-
-Um espaço pensado para você relaxar enquanto cuida da aparência.
-
-</p>
+<p>Um espaço organizado para você relaxar enquanto cuida da aparência.</p>
 
 </div>
 
 <div class="why-card">
 
-<h3>
+<h3>📱 Atendimento direto</h3>
 
-📱 Atendimento pelo WhatsApp
-
-</h3>
-
-<p>
-
-Fale diretamente com a barbearia para tirar dúvidas, consultar horários ou combinar seu atendimento.
-
-</p>
+<p>Fale pelo WhatsApp para consultar horários, serviços e informações da barbearia.</p>
 
 </div>
 
@@ -405,77 +369,44 @@ Fale diretamente com a barbearia para tirar dúvidas, consultar horários ou com
 
 <div class="contact-info">
 
-<span class="section-badge">
+<span class="section-badge">Contato</span>
 
-Contato
-
-</span>
-
-<h2>
-
-Venha conhecer a Barbearia XXXX
-
-</h2>
+<h2>Venha conhecer a Barbearia XXXX</h2>
 
 <p>
 
-Estamos prontos para oferecer um atendimento de qualidade. Entre em contato pelo WhatsApp ou venha nos visitar.
+Entre em contato pelo WhatsApp ou venha até nossa unidade.
 
 </p>
 
-<div class="contact-items">
+<div class="contact-list">
 
 <div>
 
-<h4>
+<h4>📍 Endereço</h4>
 
-📍 Endereço
-
-</h4>
-
-<p id="endereco">
-
-Rua Exemplo, 123 - Centro
-
-</p>
+<p id="endereco">Rua Exemplo, 123 - Centro</p>
 
 </div>
 
 <div>
 
-<h4>
+<h4>🕒 Horário</h4>
 
-🕒 Horário
-
-</h4>
-
-<p id="horario">
-
-Segunda a Sábado • 08:00 às 20:00
-
-</p>
+<p id="horario">Segunda a Sábado • 08:00 às 20:00</p>
 
 </div>
-
 <div>
 
-<h4>
+<h4>📷 Instagram</h4>
 
-📱 Instagram
-
-</h4>
-
-<a href="#" id="instagramLink" target="_blank">
-
-@barbeariaxxxx
-
-</a>
+<a href="#" id="instagramLink" target="_blank">@barbeariaxxxx</a>
 
 </div>
 
 </div>
 
-<a href="#" class="btn btn-primary" id="contactWhatsapp" target="_blank">
+<a href="#" class="btn btn-green" id="contactWhatsapp" target="_blank">
 
 Chamar no WhatsApp
 
@@ -483,14 +414,13 @@ Chamar no WhatsApp
 
 </div>
 
-<div class="map-area">
+<div class="map-box">
 
 <iframe
 id="googleMaps"
 src="https://www.google.com/maps?q=Teresina&output=embed"
 loading="lazy"
 allowfullscreen>
-
 </iframe>
 
 </div>
@@ -498,16 +428,11 @@ allowfullscreen>
 </div>
 
 </section>
-
-<section class="cta">
+<section class="final-cta">
 
 <div class="container">
 
-<h2>
-
-Seu próximo corte começa com uma mensagem.
-
-</h2>
+<h2>Seu próximo corte começa com uma mensagem.</h2>
 
 <p>
 
@@ -515,7 +440,7 @@ Clique no botão abaixo e fale diretamente com nossa equipe pelo WhatsApp.
 
 </p>
 
-<a href="#" class="btn btn-primary btn-large" id="finalWhatsapp" target="_blank">
+<a href="#" class="btn btn-green btn-large" id="finalWhatsapp" target="_blank">
 
 Agendar pelo WhatsApp
 
@@ -525,33 +450,30 @@ Agendar pelo WhatsApp
 
 </section>
 
-<footer>
+<footer class="footer">
 
 <div class="container footer-content">
 
 <img src="images/logo.png." alt="Logo Barbearia XXXX">
 
-<h3 id="footerEmpresa">
+<h3 id="footerEmpresa">Barbearia XXXX</h3>
 
-Barbearia XXXX
-
-</h3>
-
-<p>
-
-© 2026 Todos os direitos reservados.
-
-</p>
+<p>© 2026 Todos os direitos reservados.</p>
 
 </div>
 
 </footer>
-
-<a href="#" class="floating-whatsapp" id="floatingWhatsapp" target="_blank">
+<a href="#" class="floating-whatsapp" id="floatingWhatsapp" target="_blank" aria-label="WhatsApp">
 
 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
 
 </a>
+
+<div class="lightbox" id="lightbox">
+
+<img src="" alt="Imagem ampliada" id="lightboxImg">
+
+</div>
 
 <script src="config.js"></script>
 
