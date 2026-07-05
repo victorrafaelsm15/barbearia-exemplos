@@ -278,11 +278,10 @@ gap:20px;
 
 .gallery-item{
 width:100%;
-height:280px;
+aspect-ratio:1/1;
 object-fit:cover;
+object-position:center;
 border-radius:18px;
-cursor:pointer;
-transition:.35s;
 }
 
 .gallery-item:hover{
@@ -307,8 +306,11 @@ transform:translateY(-8px);
 
 .team-card img{
 width:100%;
-height:340px;
-object-fit:cover;
+height:320px;
+object-fit:contain;
+object-position:center;
+background:#111;
+padding:15px;
 }
 
 .team-card div{
